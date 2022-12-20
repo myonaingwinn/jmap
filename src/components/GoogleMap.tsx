@@ -3,7 +3,7 @@ import * as React from "react";
 
 const GMap: React.FunctionComponent = () => {
 	const { isLoaded } = useLoadScript({
-		googleMapsApiKey: "AIzaSyAv12djqjUud5Sjl5VlETesIcW38XSJMhc", //process.env.REACT_APP_GMAP_API_KEY as string,
+		googleMapsApiKey: process.env.REACT_APP_GMAP_API_KEY as string,
 	});
 
 	const center = React.useMemo(() => ({ lat: 20.144444, lng: 92.896942 }), []);
